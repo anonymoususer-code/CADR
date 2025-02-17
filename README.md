@@ -11,7 +11,7 @@ We recommended the following dependencies:
 - tensorboard
 ## Datasets
 We have prepared the caption files for two datasets in data/ folder, hence you just need to download the images of the datasets. We hope that the final data are organized as follows:
-
+```bash
 data
 ├── coco  # coco captions
 │   ├── train_ids.txt
@@ -35,7 +35,7 @@ data
 
 ## Training
 First, we set up the arguments, detailed information about the arguments is shown in arguments.py.
-
+```bash
 --dataset: the chosen datasets, e.g., f30k and coco.
 --data_path: the root path of datasets, e.g., data/.
 --multi_gpu: whether to use the multiple GPUs (DDP) to train the models.
@@ -44,13 +44,3 @@ First, we set up the arguments, detailed information about the arguments is show
 
 Then, we run the train.py for model training. 
 
-```bash
-# 克隆项目仓库
-git clone https://github.com/your-repo/your-project.git
-cd your-project
-
-# 安装 Python 依赖
-pip install -r requirements.txt
-
-# 安装 Node.js 依赖
-npm install
