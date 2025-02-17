@@ -46,10 +46,16 @@ First, we set up the arguments, detailed information about the arguments is show
 --logger_name, the path of logger files, e.g., runs/f30k_test or runs/coco_test
 ```
 
-Then, we run the train.py for model training. 
+Then, we run the ```bash train.py``` for model training. 
+```bash
+### f30k
+python train.py --dataset f30k --gpu-id 0
+
+### coco
+python train.py --dataset coco --gpu-id 0
+```
 
 ## Evaluation
-
 Run eval.py to evaluate the trained models on f30k or coco datasets, and you need to specify the model paths.
 ```bash
 python eval.py --dataset f30k --data_path data/ --gpu-id 0
