@@ -9,8 +9,41 @@ We recommended the following dependencies:
 - transformers >=4.32.0
 - opencv-python
 - tensorboard
+## Datasets
+We have prepared the caption files for two datasets in data/ folder, hence you just need to download the images of the datasets. We hope that the final data are organized as follows:
 
-### Environments
+data
+├── coco  # coco captions
+│   ├── train_ids.txt
+│   ├── train_caps.txt
+│   ├── testall_ids.txt
+│   ├── testall_caps.txt
+│   └── id_mapping.json
+│
+├── f30k  # f30k captions
+│   ├── train_ids.txt
+│   ├── train_caps.txt
+│   ├── test_ids.txt
+│   ├── test_caps.txt
+│   └── id_mapping.json
+│
+├── flickr30k-images # f30k images
+│
+├── coco-images # coco images
+│   ├── train2014
+│   └── val2014
+
+## Training
+First, we set up the arguments, detailed information about the arguments is shown in arguments.py.
+
+--dataset: the chosen datasets, e.g., f30k and coco.
+--data_path: the root path of datasets, e.g., data/.
+--multi_gpu: whether to use the multiple GPUs (DDP) to train the models.
+--gpu-id, the chosen GPU number, e.g., 0-7.
+--logger_name, the path of logger files, e.g., runs/f30k_test or runs/coco_test
+
+Then, we run the train.py for model training. 
+
 ```bash
 # 克隆项目仓库
 git clone https://github.com/your-repo/your-project.git
