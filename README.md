@@ -2,9 +2,10 @@
 ## Introductiom
 Cross-modal retrieval aims to bridge the gap between vision and language.The key lies in how to effectively learn the semantic similarity between images and text. For images containing complex scenes, traditional fine-grained alignment methods are difficult to fully capture the association information between visual fragments and text words, leading to problems such as redundancy of visual fragments and alignment error. In this paper, we propose a new image-text retrieval framework based on Context Anchor Attention and DINOv2, known as CADR, to achieve fine-grained alignment. Specifically, we utilize DINOv2 as an image encoder to extract richer feature representations. Additionally, we introduce context anchor attention to implement a long-range context capture mechanism. This mechanism serves to enhance the understanding of the overall semantics of images, enabling us to identify visual patches associated with text more efficiently and accurately. 
 
-!(CADR/imgs/模型结构图.png)
 
 ## Preparation
+
+### Environments
 We recommended the following dependencies:
 - python >= 3.8
 - torch >= 1.12.0
@@ -13,7 +14,7 @@ We recommended the following dependencies:
 - opencv-python
 - tensorboard
 
-## Datasets
+### Datasets
 We have prepared the caption files for two datasets in data/ folder, hence you just need to download the images of the datasets. We hope that the final data are organized as follows:
 ```bash
 data
@@ -38,7 +39,10 @@ data
 │   └── val2014
 ```
 
-## Datasets
+### Model Weights
+Our framework needs to get the pre-trained weights for BERT-base and DINOv2 models. You also can choose the weights downloaded by transformers automatically (the weights will be downloaded at ~/.cache).
+
+## Training
 First, we set up the arguments, detailed information about the arguments is shown in arguments.py.
 ```bash
 --dataset: the chosen datasets, e.g., f30k and coco.
