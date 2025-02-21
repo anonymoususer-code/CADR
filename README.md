@@ -13,6 +13,7 @@ We recommended the following dependencies:
 - transformers >=4.32.0
 - opencv-python
 - tensorboard
+- tensorflow
 
 ### Datasets
 We have prepared the caption files for two datasets in data/ folder, hence you just need to download the images of the datasets. We hope that the final data are organized as follows:
