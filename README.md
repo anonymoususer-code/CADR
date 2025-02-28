@@ -3,8 +3,6 @@
 
 Cross-modal retrieval aims to bridge the gap between vision and language.The key lies in how to effectively learn the semantic similarity between images and text. For images containing complex scenes, traditional fine-grained alignment methods are difficult to fully capture the association information between visual fragments and text words, leading to problems such as redundancy of visual fragments and alignment error. 
 
-![图片描述](https://raw.githubusercontent.com/anonymoususer-code/CADR/main/imgs/CADR.png)
-
 <div align=center>
 <img src="imgs/CADR.png" width="80%">
 </div>
