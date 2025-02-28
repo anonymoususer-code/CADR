@@ -5,6 +5,10 @@ Cross-modal retrieval aims to bridge the gap between vision and language.The key
 
 ![图片描述](https://raw.githubusercontent.com/anonymoususer-code/CADR/main/imgs/CADR.png)
 
+<div align=center>
+<img src="imgs/CADR.png" width="80%">
+</div>
+
    In this paper, we propose a new image-text retrieval framework based on Context Anchor Attention and DINOv2, known as CADR, to achieve fine-grained alignment. Specifically, we utilize DINOv2 as an image encoder to extract richer feature representations. Additionally, we introduce context anchor attention to implement a long-range context capture mechanism. This mechanism serves to enhance the understanding of the overall semantics of images, enabling us to identify visual patches associated with text more efficiently and accurately. 
 
 ## Preparation
