@@ -61,11 +61,23 @@ First, we set up the arguments, detailed information about the arguments is show
 
 Then, we run the ```train.py``` for model training. The models need about 20,000 GPU-Memory (one 3090 GPU) when batch size = 64. You need to modify the batch size according to the hardware conditions, and we also support the multiple GPUs training. 
 ```bash
+
+## single GPU
+
 ### f30k
 python train.py --dataset f30k --gpu-id 0
 
 ### coco
 python train.py --dataset coco --gpu-id 0
+
+## multiple GPUs
+
+### f30k 
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.run --nproc_per_node=2 train.py --dataset f30k --multi_gpu 1 --logger_name runs/f30k --batch_size 64
+
+### coco
+CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.run --nproc_per_node=4 train.py --dataset coco --multi_gpu 1 --logger_name runs/coco --batch_size 64
+
 ```
 
 ## Evaluation
