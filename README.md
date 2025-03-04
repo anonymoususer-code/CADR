@@ -22,7 +22,10 @@ We recommended the following dependencies:
 - tensorflow
 
 ### Datasets
-We have prepared the caption files for two datasets in data/ folder, hence you just need to download the images of the datasets. We hope that the final data are organized as follows:
+We have prepared the caption files for two datasets in  `data/` folder, hence you just need to download the images of the datasets. 
+The Flickr30K (f30k) images can be downloaded in [flickr30k-images](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset). The MSCOCO (coco) images can be downloaded in [train2014](http://images.cocodataset.org/zips/train2014.zip), and [val2014](http://images.cocodataset.org/zips/val2014.zip).
+We hope that the final data are organized as follows: 
+
 ```bash
 data
 ├── coco  # coco captions
@@ -47,7 +50,8 @@ data
 ```
 
 ### Model Weights
-Our framework needs to get the pre-trained weights for BERT-base and DINOv2 models. You also can choose the weights downloaded by transformers automatically (the weights will be downloaded at ~/.cache).
+Our framework needs to get the pre-trained weights for [BERT-base](https://huggingface.co/bert-base-uncased) and [DINOv2](https://huggingface.co/facebook/dinov2-base) models. You also can choose the weights downloaded by [transformers](https://github.com/huggingface/transformers) automatically (the weights will be downloaded at  `~/.cache`).
+
 
 ## Training
 First, we set up the arguments, detailed information about the arguments is shown in ```arguments.py```.
