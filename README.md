@@ -50,7 +50,7 @@ data
 Our framework needs to get the pre-trained weights for BERT-base and DINOv2 models. You also can choose the weights downloaded by transformers automatically (the weights will be downloaded at ~/.cache).
 
 ## Training
-First, we set up the arguments, detailed information about the arguments is shown in arguments.py.
+First, we set up the arguments, detailed information about the arguments is shown in ```arguments.py```.
 ```bash
 --dataset: the chosen datasets, e.g., f30k and coco.
 --data_path: the root path of datasets, e.g., data/.
@@ -59,7 +59,7 @@ First, we set up the arguments, detailed information about the arguments is show
 --logger_name, the path of logger files, e.g., runs/f30k_test or runs/coco_test
 ```
 
-Then, we run the ```bash train.py``` for model training. 
+Then, we run the ```bash train.py``` for model training. The models need about 20,000 GPU-Memory (one 3090 GPU) when batch size = 64. You need to modify the batch size according to the hardware conditions, and we also support the multiple GPUs training. 
 ```bash
 ### f30k
 python train.py --dataset f30k --gpu-id 0
