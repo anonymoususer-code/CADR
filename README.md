@@ -78,7 +78,7 @@ python eval.py --dataset coco --data_path data/ --gpu-id 1
 The following tables show the reproducing results of cross-modal retrieval on MSCOCO and Flickr30K datasets. We provide the training logs, checkpoints, performances, and hyper-parameters.
 
 | Datasets | Visual encoders | I-T R@1 | I-T R@5 | T-I R@1 | T-I R@5 | Model checkpoint |
-| --- | --- | --- | --- | --- | --- | --- |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Flickr30K | DINOv2 | 84.3 | 98.3 | 71.9 | 92.7 |[Link](https://drive.google.com/drive/folders/1FDSZ2_uZzJIRk4xQph4ZIu-jfD8FSoQA?usp=sharing) |
 | MSCOCO-1K | DINOv2 | 82.6 | 97.2 | 70.9 | 93.7 |[Link](https://drive.google.com/drive/folders/12XT_gZLPCvuGs503HToworv8DNGuwonk?usp=sharing) |
 
